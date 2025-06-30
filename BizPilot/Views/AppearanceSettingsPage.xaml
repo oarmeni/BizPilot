@@ -1,0 +1,42 @@
+﻿<Page x:Class="BizPilot.Views.AppearanceSettingsPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      Title="Ρυθμίσεις Εμφάνισης και Γλώσσας">
+
+    <Grid Background="White" Margin="20">
+        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" Margin="20" Width="400">
+
+            <TextBlock Text="Ρυθμίσεις Εμφάνισης &amp; Γλώσσας"
+                       FontSize="24"
+                       FontWeight="Bold"
+                       Margin="0,0,0,30"
+                       HorizontalAlignment="Center"/>
+
+            <!-- Theme Toggle -->
+            <TextBlock Text="Θέμα:" FontSize="16" Margin="0,10"/>
+            <ToggleButton x:Name="ThemeToggle"
+                          Style="{StaticResource ThemeToggleStyle}"
+                          IsChecked="False"
+                          Checked="ThemeToggle_Checked"
+                          Unchecked="ThemeToggle_Unchecked"/>
+
+            <!-- Language Toggle -->
+            <TextBlock Text="Γλώσσα:" FontSize="16" Margin="20,10,0,0"/>
+            <ToggleButton x:Name="LanguageToggle"
+                          Style="{StaticResource LanguageToggleStyle}"
+                          IsChecked="False"
+                          Checked="LanguageToggle_Checked"
+                          Unchecked="LanguageToggle_Unchecked"/>
+
+            <!-- Buttons -->
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="20,30,0,0">
+                <Button Content="Αποθήκευση" Width="100" Margin="5"/>
+                <Button Content="Ακύρωση" Width="100" Margin="5"/>
+            </StackPanel>
+
+        </StackPanel>
+    </Grid>
+</Page>
+
+
+

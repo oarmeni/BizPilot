@@ -1,0 +1,116 @@
+﻿<Page x:Class="BizPilot.Views.AddAppointmentPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      Background="{DynamicResource PrimaryBackgroundBrush}"
+      Foreground="{DynamicResource PrimaryForegroundBrush}">
+
+    <Grid Margin="20">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <TextBlock Text="Καταχώρηση Νέου Ραντεβού"
+                   FontSize="24"
+                   FontWeight="Bold"
+                   HorizontalAlignment="Center"
+                   Margin="0,0,0,20"/>
+
+        <Grid Grid.Row="1" HorizontalAlignment="Center" Width="500">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <!-- Αναζήτηση -->
+                <RowDefinition Height="Auto"/>
+                <!-- Τηλέφωνο -->
+                <RowDefinition Height="Auto"/>
+                <!-- Email -->
+                <RowDefinition Height="Auto"/>
+                <!-- Ημερομηνία -->
+                <RowDefinition Height="Auto"/>
+                <!-- Ώρα -->
+                <RowDefinition Height="Auto"/>
+                <!-- Υπηρεσία -->
+                <RowDefinition Height="Auto"/>
+                <!-- Κόστος -->
+                <RowDefinition Height="Auto"/>
+                <!-- Σημειώσεις -->
+                <RowDefinition Height="Auto"/>
+                <!-- Buttons -->
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="150"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <!-- Αναζήτηση Πελάτη -->
+            <TextBlock Text="Αναζήτηση Πελάτη:" Grid.Row="0" Grid.Column="0" Margin="5"/>
+            <Border Grid.Row="0" Grid.Column="1"
+                CornerRadius="6"
+                Background="White"
+                BorderBrush="DodgerBlue"
+                BorderThickness="1.5"
+                Height="32"
+                Margin="5">
+                <DockPanel>
+                    <Image Source="/Images/search_icon.png"
+                       Width="16" Height="16"
+                       Margin="6,0"
+                       VerticalAlignment="Center"
+                       DockPanel.Dock="Left"/>
+                    <TextBox x:Name="CustomerSearchBox"
+                         Background="Transparent"
+                         BorderThickness="0"
+                         VerticalAlignment="Center"
+                         FontSize="14"
+                         Padding="2"
+                         TextChanged="CustomerSearchBox_TextChanged"/>
+                </DockPanel>
+            </Border>
+            <Button x:Name="AddCustomerButton"
+                Content="➕ Δημιουργία Πελάτη"
+                Click="AddCustomerButton_Click"
+                Visibility="Collapsed"
+                HorizontalAlignment="Left"
+                Margin="0,5,0,10"
+                Style="{StaticResource MainButtonStyle}" />
+
+            <!-- Τηλέφωνο -->
+            <TextBlock Text="Τηλέφωνο:" Grid.Row="1" Grid.Column="0" Margin="5"/>
+            <TextBox x:Name="PhoneBox" Grid.Row="1" Grid.Column="1" Margin="5" IsReadOnly="True"/>
+
+            <!-- Email -->
+            <TextBlock Text="Email:" Grid.Row="2" Grid.Column="0" Margin="5"/>
+            <TextBox x:Name="EmailBox" Grid.Row="2" Grid.Column="1" Margin="5" IsReadOnly="True"/>
+
+            <!-- Ημερομηνία -->
+            <TextBlock Text="Ημερομηνία:" Grid.Row="3" Grid.Column="0" Margin="5"/>
+            <DatePicker x:Name="AppointmentDatePicker" Margin="5,5,5,5" SelectedDate="{Binding AppointmentDate}" Grid.Column="1" Grid.Row="3" />
+
+            <!-- Ώρα -->
+            <TextBlock Text="Ώρα:" Grid.Row="4" Grid.Column="0" Margin="5"/>
+            <ComboBox ItemsSource="{Binding Options}" x:Name="TimeComboBox" Grid.Row="4" Grid.Column="1" Margin="5"/>
+
+
+            <!-- Υπηρεσία -->
+            <TextBlock Text="Υπηρεσία:" Grid.Row="5" Grid.Column="0" Margin="5"/>
+            <ComboBox ItemsSource="{Binding Options}" x:Name="ServiceComboBox" Grid.Row="5" Grid.Column="1" Margin="5"
+                SelectionChanged="ServiceComboBox_SelectionChanged"/>
+
+            <!-- Κόστος -->
+            <TextBlock Text="Κόστος (€):" Grid.Row="6" Grid.Column="0" Margin="5"/>
+            <TextBox x:Name="CostBox" Grid.Row="6" Grid.Column="1" Margin="5" IsReadOnly="True"/>
+
+            <!-- Σημειώσεις -->
+            <TextBlock Text="Σημειώσεις:" Grid.Row="7" Grid.Column="0" Margin="5"/>
+            <TextBox x:Name="NotesBox" Grid.Row="7" Grid.Column="1" Margin="5" Height="60" AcceptsReturn="True"/>
+
+            <!-- Κουμπιά -->
+            <StackPanel Grid.Row="8" Grid.ColumnSpan="2" Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,15,0,0">
+                <Button Content="Αποθήκευση" Click="Save_Click" Style="{StaticResource MainButtonStyle}" Margin="5"/>
+                <Button Content="Ακύρωση" Click="Cancel_Click" Style="{StaticResource CancelButtonStyle}" Margin="5"/>
+            </StackPanel>
+        </Grid>
+    </Grid>
+</Page>
+
+
+

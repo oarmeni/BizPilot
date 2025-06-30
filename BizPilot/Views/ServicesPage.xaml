@@ -1,0 +1,63 @@
+﻿<Page x:Class="BizPilot.Views.ServicesPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      Background="{DynamicResource PrimaryBackgroundBrush}"
+      Foreground="{DynamicResource PrimaryForegroundBrush}"
+      Title="Υπηρεσίες">
+
+    <Grid>
+        <StackPanel Margin="20">
+            <!-- Τίτλος σελίδας -->
+            <TextBlock Text="Υπηρεσίες"
+                       FontSize="24"
+                       FontWeight="Bold"
+                       HorizontalAlignment="Center"
+                       Margin="0,0,0,20"/>
+
+            <!-- Αναζήτηση + κουμπί -->
+            <StackPanel Orientation="Horizontal" Margin="0,0,0,10">
+                <Border CornerRadius="6"
+                        Background="White"
+                        BorderBrush="DodgerBlue"
+                        BorderThickness="1.5"
+                        Width="250"
+                        Height="32"
+                        Margin="0,0,10,0">
+                    <DockPanel>
+                        <Image Source="/Images/search_icon.png"
+                               Width="16"
+                               Height="16"
+                               Margin="6,0"
+                               VerticalAlignment="Center"
+                               DockPanel.Dock="Left"/>
+                        <TextBox x:Name="SearchBox"
+                                 Background="Transparent"
+                                 BorderThickness="0"
+                                 VerticalAlignment="Center"
+                                 FontSize="14"
+                                 Foreground="Gray"
+                                 Padding="2"
+                                 TextChanged="SearchBox_TextChanged"/>
+                    </DockPanel>
+                </Border>
+
+                <Button Content="➕ Νέα Υπηρεσία"
+                        Click="AddService_Click"
+                        Style="{StaticResource MainButtonStyle}"/>
+            </StackPanel>
+
+            <!-- Πίνακας υπηρεσιών -->
+            <DataGrid x:Name="ServicesGrid"
+                      AutoGenerateColumns="False"
+                      CanUserAddRows="False"
+                      IsReadOnly="True"
+                      MouseDoubleClick="ServicesGrid_MouseDoubleClick">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="Ονομασία" Binding="{Binding Name}" Width="2*"/>
+                    <DataGridTextColumn Header="Περιγραφή" Binding="{Binding Description}" Width="3*"/>
+                    <DataGridTextColumn Header="Τιμή (€)" Binding="{Binding Cost, StringFormat=F2}" Width="*"/>
+                </DataGrid.Columns>
+            </DataGrid>
+        </StackPanel>
+    </Grid>
+</Page>

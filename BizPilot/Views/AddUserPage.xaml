@@ -1,0 +1,36 @@
+﻿<Page x:Class="BizPilot.Views.AddUserPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      Background="{DynamicResource PrimaryBackgroundBrush}"
+      Foreground="{DynamicResource PrimaryForegroundBrush}"
+      Title="Προσθήκη Χρήστη">
+
+    <Grid>
+        <StackPanel Margin="20" HorizontalAlignment="Center" Width="350">
+            <TextBlock Text="Προσθήκη Νέου Χρήστη"
+                FontSize="24"
+                FontWeight="Bold"
+                HorizontalAlignment="Center"
+                Margin="0,0,0,20"/>
+            <!--Username-->
+            <TextBlock Text="Όνομα Χρήστη:"/>
+            <TextBox Style="{StaticResource RoundedTextBoxStyle}" x:Name="UsernameBox" Margin="0,5,0,15"/>
+            <!--Password-->
+            <TextBlock Text="Κωδικός Πρόσβασης:"/>
+            <PasswordBox Style="{StaticResource RoundedPasswordBoxStyle}" Width="250" x:Name="PasswordBox" Margin="0,5,0,15"/>
+            <TextBlock Text="Επιβεβαίωση Κωδικού Πρόσβασης:"/>
+            <PasswordBox Style="{StaticResource RoundedPasswordBoxStyle}" Width="250" x:Name="Password1Box" Margin="0,5,0,15"/>
+            <!--Buttons-->
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                <Button Content="Αποθήκευση"
+                        Click="Save_Click"
+                        Style="{StaticResource MainButtonStyle}"
+                        Margin="5"/>
+                <Button Content="Ακύρωση"
+                        Click="Cancel_Click"
+                        Style="{StaticResource CancelButtonStyle}"
+                        Margin="5"/>
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</Page>
