@@ -26,8 +26,9 @@ A modern WPF application for managing customers, appointments, services, and use
 
 ## 🖼️ Screenshots
 
-### 🔐 Login Page
-![Login](screenshots/login.png)
+🔐 Login Page
+<img width="1222" height="814" alt="Στιγμιότυπο οθόνης 2025-09-21 190520" src="https://github.com/user-attachments/assets/7249df31-ab99-4be4-8ec1-047d8c95693f" />
+
 
 ### 🏠 Homepage (Dashboard)
 ![Dashboard](screenshots/homepage.png)
