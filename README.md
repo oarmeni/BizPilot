@@ -27,38 +27,28 @@ A modern WPF application for managing customers, appointments, services, and use
 ## 🖼️ Screenshots
 
 🔐 Login Page
-<img width="1222" height="814" alt="Στιγμιότυπο οθόνης 2025-09-21 190520" src="https://github.com/user-attachments/assets/7249df31-ab99-4be4-8ec1-047d8c95693f" />
-
-
-### 🏠 Homepage (Dashboard)
-![Dashboard](screenshots/homepage.png)
-
-### 👥 All Customers
-![Customers](screenshots/allCustomers.png)
-
-### ➕ Add New Customer
-![Add Customer](screenshots/AddNewCustomer.png)
-
-### 📅 Appointments
-![Appointments](screenshots/Appointments.png)
-
-### ➕ Add New Appointment
-![Add Appointment](screenshots/AddNewAppointment.png)
-
-### ⚙️ Appearance Settings
-![Appearance](screenshots/Appearance.png)
-
-### ➕ Add New Service
-![Add Service](screenshots/AddNewService.png)
-
-### ➕ Add New User
-![Add User](screenshots/AddNewUser.png)
-
-### ⚙️ Settings
-![Settings](screenshots/Setting.png)
-
-### 👤 Users Management
-![Users](screenshots/Users.png)
+<img width="1222" height="814" alt="loginpage" src="https://github.com/user-attachments/assets/9a6774ad-5c0f-471a-8fcf-6bcf25997c01" />
+🏠 Homepage (Dashboard)
+<img width="1221" height="815" alt="dashboard" src="https://github.com/user-attachments/assets/d353515f-8d58-4172-9e20-a8bcfb45da70" />
+👥 All Customers
+<img width="1219" height="815" alt="customerslist" src="https://github.com/user-attachments/assets/f0446d9e-d370-432f-a7a2-f18dd9770e75" />
+➕ Add New Customer
+<img width="1213" height="813" alt="addcustomer" src="https://github.com/user-attachments/assets/25b559fa-0a09-454b-9365-19cf42175d86" />
+📅 Appointments
+<img width="1208" height="811" alt="appointmentslist" src="https://github.com/user-attachments/assets/e3c8888f-5be4-4a2b-9d55-1575f0f59d57" />
+➕ Add New Appointment
+<img width="1212" height="805" alt="addappointment" src="https://github.com/user-attachments/assets/73f22a60-9697-4b5f-80ec-05346edd536a" />
+⚙️ Appearance Settings
+<img width="1203" height="803" alt="appearance" src="https://github.com/user-attachments/assets/082c38e8-6724-4561-ac7e-b78e524532b3" />
+➕ Add New Service
+<img width="1207" height="805" alt="addservice" src="https://github.com/user-attachments/assets/06c5cb6a-cad2-4c56-a3cf-43b3bfd17c0f" />
+➕ Add New User
+<img width="1209" height="804" alt="addnewuser" src="https://github.com/user-attachments/assets/16e8dc7b-a23e-4681-abe4-15aacdda41d0" />
+⚙️ Settings
+<img width="1218" height="810" alt="services" src="https://github.com/user-attachments/assets/3e8d2c8a-5bb0-41dc-bbf9-90d49ba1bc73" />
+<img width="1211" height="809" alt="settings" src="https://github.com/user-attachments/assets/248b7434-0ece-4beb-a9b7-3a8d33fb6dba" />
+👤 Users Management
+<img width="1206" height="794" alt="userslist" src="https://github.com/user-attachments/assets/a60ee640-f348-46c1-95fb-6b9e833d53f1" />
 
 ---
 
